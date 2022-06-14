@@ -69,16 +69,4 @@ public class Chamados {
         this.descricao = descricao;
     }
 
-    public void setTxtCodPedido(String text) {
-    }
-
-    public void setTxtDescricao(String text) {
-    }
-
-    public void setTxtNomeCliente(String text) {
-    }
-
-    public void setTxtNomeFuncionario(String text) {
-    }
-
 }

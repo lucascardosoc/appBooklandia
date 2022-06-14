@@ -202,7 +202,7 @@ public class FrmCadClientes extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCadClienteActionPerformed
 
     private void btnConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaActionPerformed
-        try {
+         try {
             controller.consultaCliente();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Deu erro!");

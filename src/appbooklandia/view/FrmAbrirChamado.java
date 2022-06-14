@@ -39,9 +39,11 @@ public class FrmAbrirChamado extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         txtDescricao = new javax.swing.JTextArea();
         btnAbrirChamado = new javax.swing.JButton();
-        txtNomeFuncionario = new javax.swing.JTextField();
-        txtNomeCliente = new javax.swing.JTextField();
+        txtCodFuncionario = new javax.swing.JTextField();
+        txtCodCliente = new javax.swing.JTextField();
         txtCodPedido = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        txtCodTicket = new javax.swing.JTextField();
 
         jTextField1.setText("jTextField1");
 
@@ -51,9 +53,9 @@ public class FrmAbrirChamado extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Abrir Chamado");
 
-        jLabel2.setText("Nome do Funcionário:");
+        jLabel2.setText("Código do Funcionário:");
 
-        jLabel3.setText("Nome do Cliente:");
+        jLabel3.setText("Código do Cliente:");
 
         jLabel4.setText("Código do Pedido:");
 
@@ -63,57 +65,66 @@ public class FrmAbrirChamado extends javax.swing.JFrame {
         txtDescricao.setRows(5);
         jScrollPane1.setViewportView(txtDescricao);
 
-        btnAbrirChamado.setText("Enviar");
+        btnAbrirChamado.setText("Consulta Chamado por Ticket");
         btnAbrirChamado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAbrirChamadoActionPerformed(evt);
             }
         });
 
+        jLabel6.setText("Ticket:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(60, 60, 60)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtCodPedido, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
-                            .addComponent(txtNomeCliente)
-                            .addComponent(txtNomeFuncionario))))
-                .addContainerGap(72, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(51, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(134, 134, 134))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnAbrirChamado)
-                        .addGap(48, 48, 48))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGap(60, 60, 60)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(txtCodPedido)
+                                            .addComponent(txtCodCliente)
+                                            .addComponent(txtCodFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
+                                            .addComponent(txtCodTicket))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnAbrirChamado)))
+                        .addGap(42, 42, 42))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtCodTicket, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(43, 43, 43)
-                        .addComponent(jLabel2))
-                    .addComponent(txtNomeFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2)
+                    .addComponent(txtCodFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtNomeCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCodCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -124,16 +135,19 @@ public class FrmAbrirChamado extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnAbrirChamado)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addGap(36, 36, 36))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAbrirChamadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirChamadoActionPerformed
-        controller.abrirChamado();
-        JOptionPane.showMessageDialog(this, "Chamado aberto com sucesso!");
-        controller.limpaTela();
+        try {
+            controller.consultaChamado();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Deu erro!");
+            ex.printStackTrace();
+        }
     }//GEN-LAST:event_btnAbrirChamadoActionPerformed
 
     /**
@@ -177,13 +191,43 @@ public class FrmAbrirChamado extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtCodCliente;
+    private javax.swing.JTextField txtCodFuncionario;
     private javax.swing.JTextField txtCodPedido;
+    private javax.swing.JTextField txtCodTicket;
     private javax.swing.JTextArea txtDescricao;
-    private javax.swing.JTextField txtNomeCliente;
-    private javax.swing.JTextField txtNomeFuncionario;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the txtCodCliente
+     */
+    public javax.swing.JTextField getTxtCodCliente() {
+        return txtCodCliente;
+    }
+
+    /**
+     * @param txtCodCliente the txtCodCliente to set
+     */
+    public void setTxtCodCliente(javax.swing.JTextField txtCodCliente) {
+        this.txtCodCliente = txtCodCliente;
+    }
+
+    /**
+     * @return the txtCodFuncionario
+     */
+    public javax.swing.JTextField getTxtCodFuncionario() {
+        return txtCodFuncionario;
+    }
+
+    /**
+     * @param txtCodFuncionario the txtCodFuncionario to set
+     */
+    public void setTxtCodFuncionario(javax.swing.JTextField txtCodFuncionario) {
+        this.txtCodFuncionario = txtCodFuncionario;
+    }
 
     /**
      * @return the txtCodPedido
@@ -200,6 +244,20 @@ public class FrmAbrirChamado extends javax.swing.JFrame {
     }
 
     /**
+     * @return the txtCodTicket
+     */
+    public javax.swing.JTextField getTxtCodTicket() {
+        return txtCodTicket;
+    }
+
+    /**
+     * @param txtCodTicket the txtCodTicket to set
+     */
+    public void setTxtCodTicket(javax.swing.JTextField txtCodTicket) {
+        this.txtCodTicket = txtCodTicket;
+    }
+
+    /**
      * @return the txtDescricao
      */
     public javax.swing.JTextArea getTxtDescricao() {
@@ -213,31 +271,4 @@ public class FrmAbrirChamado extends javax.swing.JFrame {
         this.txtDescricao = txtDescricao;
     }
 
-    /**
-     * @return the txtNomeCliente
-     */
-    public javax.swing.JTextField getTxtNomeCliente() {
-        return txtNomeCliente;
-    }
-
-    /**
-     * @param txtNomeCliente the txtNomeCliente to set
-     */
-    public void setTxtNomeCliente(javax.swing.JTextField txtNomeCliente) {
-        this.txtNomeCliente = txtNomeCliente;
-    }
-
-    /**
-     * @return the txtNomeFuncionario
-     */
-    public javax.swing.JTextField getTxtNomeFuncionario() {
-        return txtNomeFuncionario;
-    }
-
-    /**
-     * @param txtNomeFuncionario the txtNomeFuncionario to set
-     */
-    public void setTxtNomeFuncionario(javax.swing.JTextField txtNomeFuncionario) {
-        this.txtNomeFuncionario = txtNomeFuncionario;
-    }
 }
