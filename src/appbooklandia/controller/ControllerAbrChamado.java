@@ -41,7 +41,7 @@ public class ControllerAbrChamado {
         ChamadoDAO chamadoDao = new ChamadoDAO();
         chamadoDao.adiciona(chm);
     }
-    
+
     public void atualizaChamado() throws SQLException {
         Chamados chm = new Chamados();
         chm.setTicket(Integer.parseInt(view.getTxtCodTicket().getText()));
@@ -53,7 +53,7 @@ public class ControllerAbrChamado {
         ChamadoDAO chamadoDao = new ChamadoDAO();
         chamadoDao.altera(chm);
     }
-    
+
     public void apagaChamado() throws SQLException {
         Chamados chm = new Chamados();
         chm.setTicket(Integer.parseInt(view.getTxtCodTicket().getText()));
