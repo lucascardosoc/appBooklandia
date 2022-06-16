@@ -46,14 +46,40 @@ public class ChamadoDAO implements ICrud<Chamados> {
 
     @Override
     public void adiciona(Chamados t) throws SQLException {
+        // String sql
+        String sql = "insert into chamados (ticket, codigoDoFuncionario, codigoDoCliente, codigoDoPedido, descricao) values(?, ?, ?, ?, ?);";
+        PreparedStatement ps = conexao.getConexao().prepareStatement(sql);
+        ps.setInt(1, t.getTicket());
+        ps.setInt(2, t.getCodigoDoFuncionario());
+        ps.setString(3, t.getCodigoDoCliente());
+        ps.setInt(4, t.getCodigoDoPedido());
+        ps.setString(5, t.getDescricao());
+        ps.execute();
+        conexao.fecha();
     }
 
     @Override
     public void altera(Chamados t) throws SQLException {
+        //String sql
+        String sql = "update chamados set codigoDoFuncionario = ?, codigoDoCliente = ?, codigoDoPedido = ?, descricao = ? where ticket = ?;";
+        PreparedStatement ps = conexao.getConexao().prepareStatement(sql);
+        ps.setInt(1, t.getCodigoDoFuncionario());
+        ps.setString(2, t.getCodigoDoCliente());
+        ps.setInt(3, t.getCodigoDoPedido());
+        ps.setString(4, t.getDescricao());
+        ps.setInt(5, t.getTicket());
+        ps.execute();
+        conexao.fecha();
     }
 
     @Override
     public void exclui(Chamados t) throws SQLException {
+        //String sql
+        String sql = "delete from chamados where ticket = ?;";
+        PreparedStatement ps = conexao.getConexao().prepareStatement(sql);
+        ps.setInt(1, t.getTicket());
+        ps.execute();
+        conexao.fecha();
     }
 
 }
