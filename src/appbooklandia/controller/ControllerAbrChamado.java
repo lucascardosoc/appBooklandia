@@ -1,12 +1,9 @@
 package appbooklandia.controller;
 
 import appbooklandia.dal.ChamadoDAO;
-import appbooklandia.dal.ClienteDAO;
 import appbooklandia.model.Chamados;
-import appbooklandia.model.Cliente;
 import appbooklandia.view.FrmAbrirChamado;
 import java.sql.SQLException;
-import java.time.LocalDate;
 
 public class ControllerAbrChamado {
 
