@@ -1,9 +1,7 @@
 package appbooklandia.controller;
 
 import appbooklandia.dal.AvaliarDAO;
-import appbooklandia.dal.ChamadoDAO;
 import appbooklandia.model.AvaliacoesProdutos;
-import appbooklandia.model.Chamados;
 import appbooklandia.view.FrmAvaliarProduto;
 import java.sql.SQLException;
 
