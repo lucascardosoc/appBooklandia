@@ -213,7 +213,7 @@ public class FrmAbrirChamado extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAtualizaActionPerformed
 
     private void btnApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApagarActionPerformed
-   try {
+        try {
             controller.apagaChamado();
             JOptionPane.showMessageDialog(this, "Chamado excluido com sucesso!");
             controller.limpaTela();

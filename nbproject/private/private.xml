@@ -3,7 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Lucas%20Cardoso/OneDrive/Documentos/NetBeansProjects/AppBooklandia/src/appbooklandia/controller/ControllerAvalProduto.java</file>
+            <file>file:/C:/Users/Lucas%20Cardoso/OneDrive/Documentos/NetBeansProjects/AppBooklandia/src/appbooklandia/view/FrmAvaliarProduto.java</file>
+            <file>file:/C:/Users/Lucas%20Cardoso/OneDrive/Documentos/NetBeansProjects/AppBooklandia/src/appbooklandia/model/AvaliacoesProdutos.java</file>
             <file>file:/C:/Users/Lucas%20Cardoso/OneDrive/Documentos/NetBeansProjects/AppBooklandia/src/appbooklandia/dal/ChamadoDAO.java</file>
+            <file>file:/C:/Users/Lucas%20Cardoso/OneDrive/Documentos/NetBeansProjects/AppBooklandia/src/appbooklandia/dal/AvaliarDAO.java</file>
             <file>file:/C:/Users/Lucas%20Cardoso/OneDrive/Documentos/NetBeansProjects/AppBooklandia/src/appbooklandia/view/FrmAbrirChamado.java</file>
             <file>file:/C:/Users/Lucas%20Cardoso/OneDrive/Documentos/NetBeansProjects/AppBooklandia/src/appbooklandia/controller/ControllerAbrChamado.java</file>
         </group>
